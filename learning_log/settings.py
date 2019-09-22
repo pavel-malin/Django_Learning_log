@@ -126,9 +126,9 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
     # Разрешены все заголовки хостов
-    ALLOWED_HOSTS = ['learning-log-for-you.herokuapp.com']
+    ALLOWED_HOSTS = ['localhost']
 
-    DEBUG = False
+    DEBUG = True
 
     # Конфигурация статических ресуров
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
