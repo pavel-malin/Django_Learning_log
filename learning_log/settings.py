@@ -25,7 +25,7 @@ SECRET_KEY = '40&xreej&#0s)*^+6dryp@+6fxrjdl*8eq*%5%^oy0c=p+s)$8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -125,10 +125,10 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Поддержка заголовка 'X-Forwarded_Proto' для request.is_secure().
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    # Разрешены все заголовки хостов
-    ALLOWED_HOSTS = ['localhost']
+    # Хостом проекта может быть только Heroku
+    ALLOWED_HOSTS = ['Learning-log.herokuapp.com']
 
-    DEBUG = True
+    DEBUG = False
 
     # Конфигурация статических ресуров
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
